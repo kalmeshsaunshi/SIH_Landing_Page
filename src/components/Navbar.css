@@ -1,0 +1,74 @@
+/* Navbar Styles */
+.navbar {
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  width: 99%; /* Full width of the screen */
+  background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black background */
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Space between logo and links */
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000; /* Ensures it's above all other elements */
+  height: 60px;
+   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);/* Subtle shadow for depth */
+  overflow: hidden;
+}
+
+/* Logo styles */
+.navbar-logo {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Links container */
+.navbar-links {
+  display: flex;
+  flex-wrap: wrap; /* Allows links to wrap if necessary */
+  gap: 10px; /* Adds spacing between links */
+  justify-content: flex-end; /* Aligns links to the right */
+  margin: 0;
+  flex-shrink: 1; /* Prevents shrinking of items in smaller viewports */
+}
+
+/* Individual link styles */
+.navbar-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 5px 10px; /* Adds padding for better click area */
+  transition: color 0.3s ease;
+  white-space: nowrap; /* Prevents breaking text onto multiple lines */
+}
+
+.navbar-links a:hover {
+  color: #f39c12; /* Add hover effect */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .navbar-links {
+    gap: 15px; /* Reduce gap on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack logo and links vertically */
+    height: auto; /* Adjust height for stacking */
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  .navbar-links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
+}
+
+/* Prevent content overlap */
+.section {
+  margin-top: 60px; /* Add margin to sections to avoid overlap with fixed navbar */
+}

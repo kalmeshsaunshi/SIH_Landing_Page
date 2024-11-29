@@ -1,0 +1,14 @@
+/* Landing Page Styles */
+.landing-page {
+  background-color: #F2F4F4;
+  color: #1E1E1E;
+  padding: 20px;
+}
+
+.landing-page h1 {
+  color: #00D47E;
+}
+
+.landing-page p {
+  color: #8D959D;
+}
